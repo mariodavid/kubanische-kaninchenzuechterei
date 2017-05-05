@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+        caption="msg://browseCaption"
+        class="de.diedavids.cuba.kukazue.web.tier.TierBrowse"
+        focusComponent="tiersTable"
+        lookupComponent="tiersTable"
+        messagesPack="de.diedavids.cuba.kukazue.web.tier">
+    <dsContext>
+        <groupDatasource id="tiersDs"
+                         class="de.diedavids.cuba.kukazue.entity.Tier"
+                         view="tier-view">
+            <query>
+                <![CDATA[select e from kukazue$Tier e]]>
+            </query>
+        </groupDatasource>
+    </dsContext>
+    <dialogMode height="600"
+                width="800"/>
+    <layout expand="tiersTable"
+            spacing="true">
+        <filter id="filter"
+                applyTo="tiersTable"
+                datasource="tiersDs">
+            <properties include=".*"/>
+        </filter>
+        <groupTable id="tiersTable"
+                    width="100%">
+            <actions>
+                <action id="create"/>
+                <action id="edit"/>
+                <action id="remove"/>
+            </actions>
+            <columns>
+                <column id="zuechternummer"/>
+                <column id="name"/>
+                <column id="geschlecht"/>
+                <column id="geburtstdatum"/>
+                <column id="vater"/>
+                <column id="mutter"/>
+            </columns>
+            <rows datasource="tiersDs"/>
+            <rowsCount/>
+            <buttonsPanel id="buttonsPanel"
+                          alwaysVisible="true">
+                <button id="createBtn"
+                        action="tiersTable.create"/>
+                <button id="editBtn"
+                        action="tiersTable.edit"/>
+                <button id="removeBtn"
+                        action="tiersTable.remove"/>
+            </buttonsPanel>
+        </groupTable>
+    </layout>
+</window>

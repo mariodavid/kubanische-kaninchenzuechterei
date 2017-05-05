@@ -1,4 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <views xmlns="http://schemas.haulmont.com/cuba/view.xsd">
-
+    <view class="de.diedavids.cuba.kukazue.entity.Tier"
+          extends="_local"
+          name="tier-view">
+        <property name="vater"
+                  view="_minimal"/>
+        <property name="mutter"
+                  view="_minimal"/>
+        <property name="dokumente"
+                  view="_minimal"/>
+    </view>
 </views>
