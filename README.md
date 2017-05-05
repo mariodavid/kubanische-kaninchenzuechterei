@@ -10,3 +10,6 @@ Das Domain-Modell enthält die folgenden Entitäten:
 - Show
 - ShowErgebnis
 - Deckung
+
+![Screenshot Groovy-Console](https://github.com/mariodavid/kubanische-kaninchenzuechterei/blob/master/images/domain-modell.png))
+
