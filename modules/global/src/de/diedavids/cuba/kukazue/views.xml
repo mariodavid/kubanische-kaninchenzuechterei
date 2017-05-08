@@ -10,4 +10,10 @@
         <property name="dokumente"
                   view="_minimal"/>
     </view>
+    <view class="de.diedavids.cuba.kukazue.entity.Show"
+          extends="_local"
+          name="show-view">
+        <property name="ergebnisse"
+                  view="_minimal"/>
+    </view>
 </views>

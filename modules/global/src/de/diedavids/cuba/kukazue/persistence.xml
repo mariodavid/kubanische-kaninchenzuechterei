@@ -4,5 +4,7 @@
     <persistence-unit name="kubanische-kaninchenzuechterei"
                       transaction-type="RESOURCE_LOCAL">
         <class>de.diedavids.cuba.kukazue.entity.Tier</class>
+        <class>de.diedavids.cuba.kukazue.entity.Show</class>
+        <class>de.diedavids.cuba.kukazue.entity.ShowErgebnis</class>
     </persistence-unit>
 </persistence>

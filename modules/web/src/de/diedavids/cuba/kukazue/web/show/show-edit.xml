@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+        caption="msg://editorCaption"
+        class="de.diedavids.cuba.kukazue.web.show.ShowEdit"
+        datasource="showDs"
+        focusComponent="fieldGroup"
+        messagesPack="de.diedavids.cuba.kukazue.web.show">
+    <dsContext>
+        <datasource id="showDs"
+                    class="de.diedavids.cuba.kukazue.entity.Show"
+                    view="show-view">
+            <collectionDatasource id="ergebnisseDs"
+                                  property="ergebnisse"/>
+        </datasource>
+    </dsContext>
+    <dialogMode height="600"
+                width="800"/>
+    <layout expand="windowActions"
+            spacing="true">
+        <fieldGroup id="fieldGroup"
+                    datasource="showDs">
+            <column width="250px">
+                <field property="titel"/>
+                <field property="showDatum"/>
+            </column>
+        </fieldGroup>
+        <groupBox id="ergebnisseBox"
+                  caption="msg://de.diedavids.cuba.kukazue.entity/Show.ergebnisse">
+            <table id="ergebnisseTable"
+                   height="200px"
+                   width="100%">
+                <actions>
+                    <action id="create"/>
+                    <action id="edit"/>
+                    <action id="remove"/>
+                </actions>
+                <columns>
+                    <column id="platzierung"/>
+                    <column id="tier"/>
+                </columns>
+                <rows datasource="ergebnisseDs"/>
+                <buttonsPanel>
+                    <button action="ergebnisseTable.create"/>
+                    <button action="ergebnisseTable.edit"/>
+                    <button action="ergebnisseTable.remove"/>
+                </buttonsPanel>
+            </table>
+        </groupBox>
+        <frame id="windowActions"
+               screen="editWindowActions"/>
+    </layout>
+</window>

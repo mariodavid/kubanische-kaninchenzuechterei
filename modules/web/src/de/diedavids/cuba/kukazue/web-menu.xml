@@ -3,5 +3,6 @@
     <menu id="application-kukazue"
           insertBefore="administration">
         <item screen="kukazue$Tier.browse"/>
+        <item screen="kukazue$Show.browse"/>
     </menu>
 </menu-config>

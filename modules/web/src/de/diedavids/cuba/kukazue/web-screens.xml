@@ -5,4 +5,8 @@
             template="de/diedavids/cuba/kukazue/web/tier/tier-browse.xml"/>
     <screen id="kukazue$Tier.edit"
             template="de/diedavids/cuba/kukazue/web/tier/tier-edit.xml"/>
+    <screen id="kukazue$Show.browse"
+            template="de/diedavids/cuba/kukazue/web/show/show-browse.xml"/>
+    <screen id="kukazue$Show.edit"
+            template="de/diedavids/cuba/kukazue/web/show/show-edit.xml"/>
 </screen-config>

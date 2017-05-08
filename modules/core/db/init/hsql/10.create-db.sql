@@ -26,3 +26,39 @@ create table KUKAZUE_TIER_FILE_DESCRIPTOR_LINK (
     primary key (TIER_ID, FILE_DESCRIPTOR_ID)
 )^
 -- end KUKAZUE_TIER_FILE_DESCRIPTOR_LINK
+-- begin KUKAZUE_SHOW
+create table KUKAZUE_SHOW (
+    ID varchar(36) not null,
+    VERSION integer not null,
+    CREATE_TS timestamp,
+    CREATED_BY varchar(50),
+    UPDATE_TS timestamp,
+    UPDATED_BY varchar(50),
+    DELETE_TS timestamp,
+    DELETED_BY varchar(50),
+    --
+    TITEL varchar(255),
+    SHOW_DATUM date not null,
+    --
+    primary key (ID)
+)^
+-- end KUKAZUE_SHOW
+-- begin KUKAZUE_SHOW_ERGEBNIS
+create table KUKAZUE_SHOW_ERGEBNIS (
+    ID varchar(36) not null,
+    VERSION integer not null,
+    CREATE_TS timestamp,
+    CREATED_BY varchar(50),
+    UPDATE_TS timestamp,
+    UPDATED_BY varchar(50),
+    DELETE_TS timestamp,
+    DELETED_BY varchar(50),
+    --
+    TIER_ID varchar(36) not null,
+    PLATZIERUNG integer,
+    TITEL varchar(255),
+    SHOW_ID varchar(36) not null,
+    --
+    primary key (ID)
+)^
+-- end KUKAZUE_SHOW_ERGEBNIS

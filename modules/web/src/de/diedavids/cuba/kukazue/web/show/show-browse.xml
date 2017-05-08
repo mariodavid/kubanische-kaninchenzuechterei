@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+        caption="msg://browseCaption"
+        class="de.diedavids.cuba.kukazue.web.show.ShowBrowse"
+        focusComponent="showsTable"
+        lookupComponent="showsTable"
+        messagesPack="de.diedavids.cuba.kukazue.web.show">
+    <dsContext>
+        <groupDatasource id="showsDs"
+                         class="de.diedavids.cuba.kukazue.entity.Show"
+                         view="show-view">
+            <query>
+                <![CDATA[select e from kukazue$Show e]]>
+            </query>
+        </groupDatasource>
+    </dsContext>
+    <dialogMode height="600"
+                width="800"/>
+    <layout expand="showsTable"
+            spacing="true">
+        <filter id="filter"
+                applyTo="showsTable"
+                datasource="showsDs">
+            <properties include=".*"/>
+        </filter>
+        <groupTable id="showsTable"
+                    multiselect="true"
+                    width="100%">
+            <actions>
+                <action id="create"
+                        openType="DIALOG"/>
+                <action id="edit"
+                        openType="DIALOG"/>
+                <action id="remove"/>
+                <action id="excel"/>
+                <action id="refresh"/>
+            </actions>
+            <columns>
+                <column id="titel"/>
+                <column id="showDatum"/>
+            </columns>
+            <rows datasource="showsDs"/>
+            <rowsCount/>
+            <buttonsPanel id="buttonsPanel"
+                          alwaysVisible="true">
+                <button id="createBtn"
+                        action="showsTable.create"/>
+                <button id="editBtn"
+                        action="showsTable.edit"/>
+                <button id="removeBtn"
+                        action="showsTable.remove"/>
+                <button id="excelBtn"
+                        action="showsTable.excel"/>
+                <button id="refreshBtn"
+                        action="showsTable.refresh"/>
+            </buttonsPanel>
+        </groupTable>
+    </layout>
+</window>
