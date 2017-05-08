@@ -34,7 +34,7 @@ Als Standardfunktionalitäten sieht man hier die CUBA Filter-Komponente. Weitere
 
 Der Tier-Editor erlaubt es dem geneigten Kaninchenzüchter Detailinformationen des Kaninchens zu pflegen.
 
-![Tier-Editor](https://github.com/mariodavid/kubanische-kaninchenzuechterei/blob/master/images/tier-listenansicht.png)
+![Tier-Editor](https://github.com/mariodavid/kubanische-kaninchenzuechterei/blob/master/images/tier-editor.png)
 
 Das Scaffolding Ergebnis liefert Formulare für die untereschiedlichen Attribute & Assoziationen der Tier Entity. N:1 Beziehnugen bspw. werden als [PickerField](https://demo.cuba-platform.com/sampler/open?screen=simple-pickerfield) / LookupField darstellt.
 
