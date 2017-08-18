@@ -1,6 +1,6 @@
 
 buildscript {
-    ext.cubaVersion = '6.5.0'
+    ext.cubaVersion = '6.6.2'
     repositories {
         maven {
             url 'https://repo.cuba-platform.com/content/groups/work'
@@ -208,7 +208,13 @@ task restart(dependsOn: ['stop', ':app-core:deploy', ':app-web:deploy'], descrip
 }
 
 task wrapper(type: Wrapper) {
-    gradleVersion = '3.1'
+    gradleVersion = '3.4'
 }
 
 apply from: 'extra.gradle'
+
+task buildUberJar(type: CubaUberJarBuilding) {
+    singleJar = true
+    coreJettyEnvPath = 'modules/core/web/META-INF/jetty-env.xml'
+    appProperties = ['cuba.automaticDatabaseUpdate' : true]
+}
