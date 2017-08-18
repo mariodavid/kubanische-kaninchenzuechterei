@@ -1,0 +1,12 @@
+version: '2'
+services:
+  web:
+    image: 'kaninchen:latest'
+    ports:
+     - "8080:8080"
+  db:
+    image: "blacklabelops/hsqldb:latest"
+    environment:
+      - HSQLDB_USER=kaninchen
+      - HSQLDB_PASSWORD=kaninchen
+      - HSQLDB_DATABASE_ALIAS=kaninchen
