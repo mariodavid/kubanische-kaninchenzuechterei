@@ -1,0 +1,6 @@
+version: '2'
+services:
+  web:
+    scale: 1
+  db:
+    scale: 1

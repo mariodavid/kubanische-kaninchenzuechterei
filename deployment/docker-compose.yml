@@ -1,9 +1,9 @@
 version: '2'
 services:
   web:
-    image: 'kaninchen:latest'
+    image: 'mariodavid/kubanische-kaninchenzuechterei:latest'
     ports:
-     - "8080:8080"
+     - "8082:8080"
   db:
     image: "blacklabelops/hsqldb:latest"
     environment:
